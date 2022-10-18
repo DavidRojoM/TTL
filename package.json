@@ -1,0 +1,22 @@
+{
+  "name": "ttl",
+  "version": "0.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "build": "rm -rf dist/lib && tsc && tsc --build tsconfig.es5.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidRojoM/TTL.git"
+  },
+  "author": "David Rojo <davidrojo1997@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DavidRojoM/TTL/issues"
+  },
+  "homepage": "https://github.com/DavidRojoM/TTL#readme",
+  "dependencies": {
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "ttl",
+  "version": "0.0.0",
+  "description": "TTL(Tiny Test Library) is a lightweight test library written in TypeScript",
+  "main": "lib/es5/index.js",
+  "module": "lib/es6/index.js",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidRojoM/TTL.git"
+  },
+  "files": [
+    "lib",
+    "CHANGELOG.md",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "keywords": [
+    "javascript",
+    "typescript",
+    "lightweight",
+    "testing",
+    "utilities"
+  ],
+  "author": "David Rojo <davidrojo1997@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidrojom/ttl/issues"
+  },
+  "homepage": "https://github.com/davidrojom/ttl#readme"
+}
