@@ -2,7 +2,7 @@ import { Result } from '../core/test.result';
 import { TestResult } from '../types/test-result.type';
 import { Assertion } from './assertion';
 
-export class EqualsAssertion<T> extends Assertion<T> {
+export class DeepEqualAssertion<T> extends Assertion<T> {
   constructor(private readonly expected: T, private readonly actual: T) {
     super();
   }
@@ -17,7 +17,7 @@ export class EqualsAssertion<T> extends Assertion<T> {
       });
     }
 
-    if (this.expected !== this.actual) {
+    if (JSON.stringify(this.expected) !== JSON.stringify(this.actual)) {
       return Result.error({
         // TODO: Add a proper exception
         error: new Error('RESULT-ERROR'),

@@ -1,2 +1,2 @@
-export * from './equals.assertion';
 export * from './assertion';
+export * from './assertion.factory';
