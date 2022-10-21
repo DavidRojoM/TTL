@@ -1,19 +1,26 @@
 import { Nullish } from './nullish.type';
 
-export type TestSuccess = {
+export interface TTestResult {
+  type: string;
+  message?: Nullish<string>;
+}
+
+export interface TestSuccess extends TTestResult {
   type: 'ok';
-  message?: Nullish<string>;
-};
+}
 
-export type TestFailure = {
+export interface TestFailure extends TTestResult {
   type: 'fail';
-  message?: Nullish<string>;
   error: Error;
-};
+}
 
-export type TestResult = TestSuccess | TestFailure;
+export interface TestSkipped extends TTestResult {
+  type: 'skipped';
+}
 
-export type EndedTest = {
+export type TestResult = TestSuccess | TestFailure | TestSkipped;
+
+export interface EndedTest {
   description?: Nullish<string>;
   result: TestResult;
-};
+}
