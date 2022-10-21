@@ -1,17 +1,16 @@
-import { assertEquals, Test } from './core/index';
+import { assertDeepEqual } from './core/functions/assert-deep-equal.fn';
+import { assertEquals, assertGreater, assertLesser } from './core/index';
+import { Test } from './core/test';
 
-Test.group('Test Group')
-  .do('should fail', assertEquals(1, 2))
-  .do('should success', assertEquals(1, 1))
-  .do('should fail', assertEquals(1, {} as number));
-
-for (const group of Test.groups) {
-  console.log(group.description);
-  for (const result of group.results) {
-    console.log({
-      description: result.description,
-      result: result.result,
-    });
-  }
-  console.log('-------------------------------------');
-}
+Test.init((test) => {
+  test.group('Group 1', (group) => {
+    group
+      .do('group 1 assertion 1', assertEquals(1, 1))
+      .do('1 should be grater than 2', assertGreater(2, 1))
+      .do('1 should be lesser than 2', assertLesser(2, 1))
+      .do('Objects should be equal', assertDeepEqual({ number: 2 }, { number: 1 }))
+      .do('Arrays should be equal', assertDeepEqual([1, 2, 3], [1, 2, 3]))
+      .do('Arrays should not be equal', assertDeepEqual([1, 2], [1, 2, 3]))
+      .do('Objects should not be equal', assertEquals({ number: 2 }, { number: 2 }));
+  });
+});
