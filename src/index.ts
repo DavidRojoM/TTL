@@ -1,5 +1,4 @@
-import { assertDeepEqual } from './core/functions/assert-deep-equal.fn';
-import { assertEquals, assertGreater, assertLesser } from './core/index';
+import { assertDeepEqual, assertEquals, assertGreater, assertLesser } from './core/index';
 import { Test } from './core/test';
 
 Test.init((test) => {
