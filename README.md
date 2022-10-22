@@ -1,3 +1,8 @@
 # TTL
 
-TTL(Tiny Test Lib) is a lightweight test library written in TypeScript
+TTL(Tiny Test Library) is a lightweight testing library written in TypeScript
+
+## Roadmap
+
+- [ ] Handle promises
+- [ ] Handle Custom assertion
