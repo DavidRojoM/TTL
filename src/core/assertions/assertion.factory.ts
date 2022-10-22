@@ -3,12 +3,14 @@ import { DeepEqualAssertion } from './deep-equals/deep-equals.assertion';
 import { EqualsAssertion } from './equals/equals.assertion';
 import { GreaterAssertion } from './greater/greater.assertion';
 import { LesserAssertion } from './lesser/lesser.assertion';
+import { NotEqualsAssertion } from './not-equals/not-equals.assertion';
 
 const assertions = {
   EqualsAssertion,
   GreaterAssertion,
   LesserAssertion,
   DeepEqualAssertion,
+  NotEqualsAssertion,
 } as const;
 
 export class AssertionFactory {
