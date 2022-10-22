@@ -1,5 +1,9 @@
-import { Nullish } from '../types/nullish.type';
-import { TestFailure, TestSkipped, TestSuccess } from '../types/test-result.type';
+import { Nullish } from '../shared-kernel/types/nullish.type';
+import {
+  TestFailure,
+  TestSkipped,
+  TestSuccess,
+} from '../shared-kernel/types/test-result.type';
 
 export class Result {
   static error({ error }: { message?: Nullish<string>; error: Error }): TestFailure {

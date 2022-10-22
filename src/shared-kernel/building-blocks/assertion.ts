@@ -1,4 +1,4 @@
-import { TestResult } from '../types/test-result.type';
+import { TestResult } from '../types/index';
 
 export abstract class Assertion<T> {
   abstract assert(): TestResult;

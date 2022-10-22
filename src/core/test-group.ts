@@ -1,9 +1,9 @@
-import { Assertion } from '../assertions/index';
 import { groupDescriptionSymbol, groupResultsSymbol } from './symbols';
-import { EndedTest } from '../types/test-result.type';
+import { EndedTest } from '../shared-kernel/types/test-result.type';
 import { MockTestGroup } from './index';
 import { Result } from './test.result';
-import { ITestGroup } from './interfaces/index';
+import { Assertion } from './assertions/index';
+import { ITestGroup } from '../shared-kernel/index';
 
 export class TestGroup implements ITestGroup {
   protected _results: EndedTest[] = [];

@@ -1,5 +1,5 @@
-import { Assertion } from '../assertions/index';
-import { ITestGroup } from './interfaces/test-group.interface';
+import { ITestGroup } from '../shared-kernel/index';
+import { Assertion } from './assertions/index';
 
 export class MockTestGroup implements ITestGroup {
   constructor(private readonly cb: (description: string) => void) {}

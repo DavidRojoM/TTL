@@ -1,6 +1,6 @@
 import { testGroupsSymbol } from './symbols';
 import { TestGroup } from './index';
-import { Assertion } from '../assertions/index';
+import { Assertion } from './assertions/index';
 
 export class ProposedTest {
   private _groups: TestGroup[] = [];

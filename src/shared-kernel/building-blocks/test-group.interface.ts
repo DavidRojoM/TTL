@@ -1,4 +1,4 @@
-import { Assertion } from '../../assertions/index';
+import { Assertion } from './assertion';
 
 export interface ITestGroup {
   do<T>(description: string, assertion: T extends Assertion<T> ? T : never): this;
