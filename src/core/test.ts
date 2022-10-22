@@ -10,10 +10,12 @@ export class Test {
    *
    * @param proposedTest - Callback to execute tests
    */
-  static init(proposedTest: (test: ProposedTest) => any): void {
+  static async init(
+    proposedTest: (test: ProposedTest) => Promise<void> | void,
+  ): Promise<void> {
     const test = new ProposedTest();
     this._proposedTests.push(test);
-    proposedTest(test);
+    await proposedTest(test);
 
     for (const test of this._proposedTests) {
       for (const group of test[testGroupsSymbol]) {

@@ -13,11 +13,12 @@ export class ProposedTest {
    * @param name - Name of the group
    * @param group - Callback group to execute tests
    */
-  group(name: string, group: (group: TestGroup) => any): void {
+  group(name: string, group: (group: TestGroup) => void): void {
     const gp = new TestGroup(name);
     this._groups.push(gp);
     group(gp);
   }
+
   /**
    *
    * Creates a group and executes an assertion in one line
