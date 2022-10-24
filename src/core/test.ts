@@ -15,7 +15,9 @@ export class Test {
   ): Promise<void> {
     const test = new ProposedTest();
     this._proposedTests.push(test);
-    await proposedTest(test);
+    try {
+      await proposedTest(test);
+    } catch (e) {}
 
     for (const test of this._proposedTests) {
       for (const group of test[testGroupsSymbol]) {

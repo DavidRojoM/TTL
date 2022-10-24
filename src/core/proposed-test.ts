@@ -13,10 +13,12 @@ export class ProposedTest {
    * @param name - Name of the group
    * @param group - Callback group to execute tests
    */
-  group(name: string, group: (group: TestGroup) => void): void {
+  async group(name: string, group: (group: TestGroup) => void): Promise<void> {
     const gp = new TestGroup(name);
     this._groups.push(gp);
-    group(gp);
+    try {
+      await group(gp);
+    } catch (e) {}
   }
 
   /**
